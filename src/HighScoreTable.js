@@ -6,6 +6,7 @@ const HighScoreTable = (props) => {
     <div>
       <h1>Country Score</h1>
       {props.countryData.map((element,index) => {
+        console.log(index, 'country data index')
         return (
           <table key={index}>
             <thead>
@@ -14,15 +15,19 @@ const HighScoreTable = (props) => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                {element.scores.map((e) => {
-                  return (
-                    <td className="list">
-                      {e.n} {e.s}
-                    </td>
-                  );
+                {element.scores.map((e,i) => {
+                  console.log(i,"scores index")
+                 return (
+                   <tr key = {i}>
+                     <td >
+                       {e.n} 
+                     </td>
+                     <td >
+                       {e.s}
+                     </td>
+                   </tr>
+                 );
                 })}
-              </tr>
             </tbody>
           </table>
         );
