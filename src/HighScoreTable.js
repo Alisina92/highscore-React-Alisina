@@ -2,11 +2,17 @@ import React from "react";
 
 
 const HighScoreTable = (props) => {
+  const sortedArray = props.countryData.sort(function(a,b){
+          if(a.name.toLowerCase()<b.name.toLowerCase())return-1;
+          if(a.name.toLowerCase()>b.name.toLowerCase())return+1;
+           return 0;
+        })
+  
   return (
     <div>
       <h1>Country Score</h1>
-      {props.countryData.map((element,index) => {
-        console.log(index, 'country data index')
+        {sortedArray.map((element,index) => {
+        
         return (
           <table key={index}>
             <thead>
@@ -16,7 +22,7 @@ const HighScoreTable = (props) => {
             </thead>
             <tbody>
                 {element.scores.map((e,i) => {
-                  console.log(i,"scores index")
+                 
                  return (
                    <tr key = {i}>
                      <td >

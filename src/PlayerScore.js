@@ -1,7 +1,7 @@
 import React from 'react';
  
 const PlayerScore =(props)=>{
-  return (
+   return (
     <table>
       <thead>
         <tr>
@@ -10,12 +10,8 @@ const PlayerScore =(props)=>{
       </thead>
       <tbody>
         <tr>
-          <td>
-            {props.countryData[1].scores[1].n}{" "}
-           </td>
-         <td>
-            {props.countryData[1].scores[1].s}
-        </td>
+          <td>{props.countryData[6].scores[1].n} </td>
+          <td>{props.countryData[6].scores[1].s}</td>
         </tr>
       </tbody>
     </table>

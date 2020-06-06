@@ -6,8 +6,8 @@ import PlayerScore from './PlayerScore';
 
 const App =()=> {
   return (
-    <div >
-      <HighScoreTable countryData={allCountryTable} />
+    <div>
+      <HighScoreTable countryData={allCountryTable}  />
       <br/>
       <PlayerScore countryData={allCountryTable} />
     </div>
