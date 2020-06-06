@@ -9,7 +9,7 @@ const App =()=> {
     <div>
       <HighScoreTable countryData={allCountryTable}  />
       <br/>
-      <PlayerScore countryData={allCountryTable} />
+      {/* <PlayerScore countryData={allCountryTable} /> */}
     </div>
   );
 }
